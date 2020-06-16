@@ -9,7 +9,7 @@ SetKeyDelay , 45 ; Ensures that Roam can read all inputs
 Send,
 (
 ^!2Tasks:
-{Tab}/{Enter}
+{Tab}/{Enter}Review [[Spaced Repetition]]
 {Shift down}{Tab}{Shift up}^!2Input:
 {Tab}^!3Read:
 ^!3Watched:
