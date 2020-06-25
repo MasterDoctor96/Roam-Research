@@ -2,7 +2,7 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Event  ; Recommended for new scripts due to its reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-SetKeyDelay , 45 ; Ensures that Roam can read all inputs
+SetKeyDelay , 50 ; Ensures that Roam can read all inputs
 
 ; Article Template
 :*:rrarttemp::
@@ -10,7 +10,7 @@ Send,
 (
 ^!2Reference
 {Tab}^!3Author:+{Enter}Summary:+{Enter}Keywords: {#}Articles{Enter}
-{Shift down}{Tab}{Shift up}Link: [[Literature notes: ^v]]^!2
+{Shift down}{Tab}{Shift up}Link: [[Literature notes: __^v__]]^!2
 Notes:^!2
 {Tab}note
 {Shift down}{Tab}{Shift up}Questions:^!2
@@ -23,7 +23,7 @@ Send,
 (
 ^!2Reference
 {Tab}^!3Author:+{Enter}Summary:+{Enter}Keywords: {#}Books{Enter}
-{Shift down}{Tab}{Shift up}Link: [[Literature notes: ^v]]^!2
+{Shift down}{Tab}{Shift up}Link: [[Literature notes: __^v__]]^!2
 Notes:^!2
 {Tab}note
 {Shift down}{Tab}{Shift up}Questions:^!2
@@ -44,14 +44,15 @@ Send,
 {Tab}^!3Challenges:
 ^!3Successes:
 )
+return
 
-: Music Template
+; Music Template
 :*:rrmusictemp::
 Send,
 (
 ^!2Reference
 {Tab}^!3Artist:+{Enter}Summary:+{Enter}Keywords: {#}Music{Enter}
-{Shift down}{Tab}{Shift up}Link: [[Literature notes: ^v]]^!2
+{Shift down}{Tab}{Shift up}Link: [[Literature notes: __^v__]]^!2
 Notes:^!2
 {Tab}Lyrics:^!3
 )
@@ -64,7 +65,7 @@ Send,
 ^!2Reference
 {Tab}^!3Host:+{Enter}Speaker:+{Enter}Summary:+{Enter}Keywords: {#}Podcasts{Enter}
 ^!3Source:{Enter}
-{Shift down}{Tab}{Shift up}Link: [[Literature notes: ^v]]^!2
+{Shift down}{Tab}{Shift up}Link: [[Literature notes: __^v__]]^!2
 Notes:^!2
 {Tab}note
 {Shift down}{Tab}{Shift up}Questions:^!2
@@ -78,7 +79,7 @@ Send,
 ^!2Reference
 {Tab}^!3Author:+{Enter}Summary:+{Enter}Keywords: {#}Videos{Enter}
 ^!3Source: /you{Enter}{Right}{Right}{Enter}
-{Shift down}{Tab}{Shift up}Link: [[Literature notes: ^v]]^!2
+{Shift down}{Tab}{Shift up}Link: [[Literature notes: __^v__]]^!2
 Notes:^!2
 {Tab}note
 {Shift down}{Tab}{Shift up}Questions:^!2
